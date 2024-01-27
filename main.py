@@ -3,7 +3,7 @@ from compare_sentence import getAnswer, getSimilarity, add_Entry
 
 st.title("M.Y. Note:")
 
-option = st.radio('test', ['get info', 'update info'])
+option = st.radio('', ['get info', 'update info'])
     
 if option == 'get info':
     question = st.text_input("Question: ")
