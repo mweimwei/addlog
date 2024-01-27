@@ -1,0 +1,5 @@
+import nltk
+
+nltk.download('stopwords', download_dir='D:/ming/projects/LLM')
+nltk.download('word_tokenize', download_dir='D:/ming/projects/LLM')
+
