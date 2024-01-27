@@ -1,10 +1,10 @@
 prompt,response
 how to know which are files are changed in my local copy ,"git status: it shows modified files in working directory, staged for your next commit"
 how to add a file using git,git add [file]
-what does stage  mean in git,"In Git, staging is the process of preparing changes to be committed. When you make changes to a file that is being tracked by Git, the changes are not automatically committed. Instead, you must first stage the changes, Staging allows you to selectively choose which changes you want to commit. For example, if you have made changes to multiple files, but only want to commit changes to one of them, you can stage only that file and commit it. This helps keep your commits organized and makes it easier to track changes over time.which adds them to the staging area"
+what does stage  mean in git,"In Git,ï¿½stagingï¿½is the process of preparing changes to be committed. When you make changes to a file that is being tracked by Git, the changes are not automatically committed. Instead, you must first stage the changes, Staging allows you to selectively choose which changes you want to commit. For example, if you have made changes to multiple files, but only want to commit changes to one of them, you can stage only that file and commit it. This helps keep your commits organized and makes it easier to track changes over time.which adds them to the staging area"
 how to know which files are changed but not staged,git diff
 "how to know wchin files are staged , but not commited",git diff --staged
-"how to check in files, which are staged",git commit -m “[descriptive message]”
+"how to check in files, which are staged",git commit -m ï¿½[descriptive message]ï¿½
 how to get updated source code files,"git pull , it will get the changes from the remote branch and merge them into your local branch. This will create a merge commit if there are any conflicts or diverging histories"
 how to refresh all environment variables,"To refresh all environment variables in Windows command line, you can use the refreshenv command.  One way to install it is by using Chocolatey, which has a script for this built-in"
 midl : command line error MIDL1001 : cannot open input file oaidl.idl,"make sure environment variable ""include"" has  ""C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;""
@@ -23,3 +23,4 @@ what are the steps to get new source,"1> get source branch (imagenation, recogni
 how to compile source code,1> get the source code 2> gradle Debug64 (Release64) would build the source branch
 how to build source code ,gradle buildlocal -Pplatform=windows/linux
 You are not allowed to push code to this project.,"this is a permission issue, talk with source branch owner"
+ä¸­æ–‡é—®é¢˜,ç­”æ¡ˆ

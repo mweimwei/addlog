@@ -1,8 +1,9 @@
 from sentence_transformers import SentenceTransformer, util
 import torch
 import csv
+import io 
 
-csvfile = "C:\\Ming\\GPT\\myNote\\mynote1.csv"
+csvfile = ".\\mynote1.csv"
 
 questions = []
 answers = []
@@ -61,19 +62,20 @@ def add_Entry(question, answer):
     if( indx >0 and indx <length):
         result = 'Question exists already: ' + str(indx)
     else:
-        # Open the CSV file in append mode
-        with open(csvfile, mode='a', newline='') as file:
+        # Open the CSV file in append mode        
+        with io.open(csvfile, 'a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-
-            # Write the new question-answer pair to the CSV file
             writer.writerow([question, answer])
-        
+
         questions = []
         answers = []    
         with open(csvfile) as f:
             for row in csv.reader(f):
                 questions.append(row[0])
                 answers.append(row[1])
+        # should use global variable questions and answers        
+        # questions.append(question)
+        # answers.append(answer)
         questions = [s for s in questions if s.strip() != ""]
         sentence_embeddings = model.encode(questions, convert_to_tensor=True)    
         result = 'new entry has beeen added'  
@@ -93,4 +95,4 @@ if __name__ == "__main__":
     else:
         ans = 'I do not know'
     # Print the result
-    print("The answer is {ans}")
+    print("The answer is {}",ans)
