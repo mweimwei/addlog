@@ -3,3 +3,17 @@ import nltk
 nltk.download('stopwords', download_dir='D:/ming/projects/LLM')
 nltk.download('word_tokenize', download_dir='D:/ming/projects/LLM')
 
+*****************add key words, weight 1-3, 3 is most impotent*********
+from sentence_transformers import models
+
+# Define the word weights
+word_weights = {"important": 2.0, "words": 1.5}
+
+# Create the BoW model with custom word weights
+bow_model = models.BoW(vocab=["important", "words"], word_weights=word_weights)
+
+# Compute the BoW representation of a sentence
+sentence = "This is a sentence with important words."
+sentence_embedding = bow_model.encode([sentence])[0]
+
+print(f"The BoW representation of the sentence is: {sentence_embedding}")
